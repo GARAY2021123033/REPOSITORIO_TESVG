@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>REPOSITORIO DE SISTEMAS</title>
+
+    <meta name="description" content="Description">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+
+    <link rel="icon" href="/assets/img/favicon/halcon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preload" href="assets/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-regular.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/source-sans-pro-v21-latin/source-sans-pro-v21-latin-700.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/montserrat-v25-latin/montserrat-v25-latin-700.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/montserrat-v25-latin/montserrat-v25-latin-600.woff2" as="font"
+        type="font/woff2" crossorigin>
+
+    <link rel="preload" href="assets/fonts/material-icons/material-icons.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/material-icons/material-icons-outlined.woff2" as="font" type="font/woff2"
+        crossorigin>
+
+    <!-- Estilos -->
+
+    <style>
+        .formulario-wrapper {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-width: 300px;
+        }
+
+        .formulario-wrapper label,
+        .formulario-wrapper input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .formulario-wrapper input {
+            padding: 8px;
+            width: calc(100% - 16px);
+        }
+
+        .formulario-wrapper button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .formulario-wrapper button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <!-- Fin de Estilos -->
+</head>
+
+<body>
+
+    <main class="main">
+
+        <div class="main-inner">
+
+            <!-- menu de navegación -->
+            <nav class="mmm">
+                <div class="mmm-content">
+                    <ul class="mmm-list">
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="about-us.html">Sobre nosotros</a>
+                        </li>
+
+                        <li>
+                            <a href="contacts.html">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- boton para iniciar secion a administradores -->
+            <div class="bff">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="bff-container">
+                                <p>Respositorio <br class="d-sm-none"> DE SISTEMAS COMPUTACIONALES</p>
+                                <div class="btn-group justify-content-center justify-content-md-start">
+
+
+
+
+
+                                    <div class="formulario-wrapper" id="formulario">
+                                        <form id="formAdmin" onsubmit="return enviarFormulario()">
+                                            <label for="usuario">Usuario:</label>
+                                            <input type="text" id="usuario" name="usuario" required>
+                                            <label for="contrasena">Contraseña:</label>
+                                            <input type="password" id="contrasena" name="contrasena" required>
+                                            <button type="button"
+                                                onclick="window.location.href='Administradores.html'">Iniciar
+                                                Sesión</button>
+
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="header header-minimal">
+                <nav class="header-fixed">
+                    <div class="container">
+                        <div class="row flex-nowrap align-items-center justify-content-between">
+                            <div class="col-auto header-fixed-col logo-wrapper">
+                                <a href="index.html" class="logo" title="PathSoft">
+                                    <img src="assets/img/LOGOtesvg.png" width="115" height="36" alt="PathSoft">
+
+                                </a>
+                            </div>
+                            <div class="col-auto col-xl col-static header-fixed-col d-none d-xl-block">
+                                <div class="row flex-nowrap align-items-center justify-content-end">
+                                    <div class="col header-fixed-col d-none d-xl-block col-static">
+                                        <!--  -->
+                                        <nav class="main-mnu">
+                                            <ul class="main-mnu-list">
+                                                <li>
+                                                    <a href="index.html" data-title="Home">
+                                                        <span>Inicio</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="about-us.html" data-title="About us">
+                                                        <span>Sobre nosotros</span>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="contacts.html" data-title="Contacts">
+                                                        <span>Contactos</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav><!-- End main menu -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto d-block d-xl-none header-fixed-col">
+                                <div class="main-mnu-btn">
+                                    <span class="bar bar-1"></span>
+                                    <span class="bar bar-2"></span>
+                                    <span class="bar bar-3"></span>
+                                    <span class="bar bar-4"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- EN ESTE ESPACIO VA EL LOGIN Y LOS 2 ESTAS COSAS PARA INGRESAR EL USUARIO Y CONTRASELA Y UN BOTON QUE DIGA INGRESAR -->
+
+
+
+            <!-- LOGIN ADMINISTRADORES EN PÁGINA PRINCIPAL -->
+            <section class="section" style="padding: 40px 0;">
+                <div class="container">
+                    <h2 style="text-align: center;">Acceso Administradores</h2>
+
+
+
+                    <form id="loginForm" action="verificar_login.php" method="POST"
+                        style="max-width: 400px; margin: 0 auto;">
+
+                        <div style="margin-bottom: 15px;">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" id="usuario" name="usuario" class="form-control" required>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <label for="contrasena">Contraseña:</label>
+                            <input type="password" id="contrasena" name="contrasena" class="form-control" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+
+                    </form>
+
+                    <div id="mensaje" style="display: none; color: green; margin-top: 10px;"></div>
+
+                    <div id="verificacion" style="display: none; margin-top: 15px;">
+                        <input type="text" id="token" placeholder="Ingresa el token">
+                        <button type="button" class="btn btn-primary btn-block" onclick="validarToken()">Validar
+                            token</button>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+
+            <!-- PIE DE PAGINA -->
+            <footer class="section-footer col-12 item section-footer-animate">
+                <div class="btn-group align-items-center justify-content-center">
+
+                </div>
+            </footer>
+        </div>
+        </div>
+        </section>
+
+        </div>
+
+        <div class="bff">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="bff-container">
+                            <p>TECNOLOGICO DE ESTUDIOS SUPERIORES DE VILLA GUERRERO <br class="d-sm-none"> </p>
+                            <div class="btn-group justify-content-center justify-content-md-start">
+                                <a href="https://www.facebook.com/?locale=es_LA"
+                                    class="btn btn-border btn-with-icon btn-small ripple">
+                                    <span>FACEBOOK</span>
+                                    <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9">
+                                        <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </a>
+                                <a href="https://tesvg.edomex.gob.mx/"
+                                    class="btn btn-border btn-with-icon btn-small ripple">
+                                    <span>PAGINA OFICIAL</span>
+                                    <svg class="btn-icon-right" viewBox="0 0 13 9" width="13" height="9">
+                                        <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Begin footer -->
+        <footer class="footer footer-minimal">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row items align-items-center">
+                        <div class="col-lg-3 col-md-4 col-12 item">
+                            <div class="widget-brand-info">
+                                <div class="widget-brand-info-main">
+                                    <a href="index.html" class="logo" title="PathSoft">
+                                        <img src="assets/img/LOGOtesvg.png" class="lazy" width="133" height="36"
+                                            alt="PathSoft" data-loaded="true" style="opacity: 1;">
+
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md item">
+                            <div class="footer-item">
+                                <nav class="footer-nav">
+                                    <ul class="footer-mnu footer-mnu-line">
+                                        <li><a href="#!" class="hover-link" data-title="Home"><span>Inicio</span></a>
+                                        </li>
+                                        <li><a href="#!" class="hover-link" data-title="About us"><span>Sobre
+                                                    nosotros</span></a></li>
+                                        <li><a href="#!" class="hover-link"
+                                                data-title="Services"><span>Servicios</span></a></li>
+                                        <li><a href="#!" class="hover-link"
+                                                data-title="Contacts"><span>Contactos</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row justify-content-between items">
+                        <div class="col-md-auto col-12 item">
+                            <nav class="footer-links">
+                                <ul>
+                                    <li><a href="terms-and-conditions.html">Terminos y condiciones</a></li>
+                                    <li><a href="privacy-policy.html">Politicas de privacidad</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="col-md-auto col-12 item">
+                            <div class="copyright">© 2024 TESVG. Derechos reservados</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer><!-- End footer -->
+
+    </main><!-- End main -->
+
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/lozad/lozad.min.js"></script>
+    <script src="assets/libs/device/device.js"></script>
+    <script src="assets/libs/spincrement/jquery.spincrement.min.js"></script>
+    <script src="assets/libs/pristine/pristine.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/forms.js"></script>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevenir envío clásico
+            const formData = new FormData(this);
+
+            fetch('verificar_login.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const mensaje = document.getElementById('mensaje');
+                    mensaje.innerText = data.mensaje;
+                    mensaje.style.display = 'block';
+
+                    if (data.estado === 'ok') {
+                        document.getElementById('verificacion').style.display = 'block';
+                    } else {
+                        document.getElementById('verificacion').style.display = 'none';
+                    }
+                });
+        });
+
+        function validarToken() {
+            const token = document.getElementById('token').value;
+
+            fetch('validar_token.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `token=${token}`
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert(data.mensaje);
+                    if (data.estado === 'ok') {
+                        window.location.href = 'administradores.html';
+                    }
+
+                });
+        }
+    </script>
+
+
+</body>
+
+</html>
